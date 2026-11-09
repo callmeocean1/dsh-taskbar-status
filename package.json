@@ -34,11 +34,9 @@
     "node": ">=22.19",
     "dsh": ">=0.1.1-rc.2 <0.3.0-0"
   },
-  "dependencies": {
-    "koffi": "3.1.1"
-  },
   "peerDependencies": {
-    "@deepseek-ai/cordis": "^4.0.1"
+    "@deepseek-ai/cordis": "^4.0.1",
+    "koffi": ">=3.1.1 <4"
   },
   "scripts": {
     "probe": "node scripts/probe.mjs",
@@ -48,6 +46,11 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependenciesMeta": {
+    "koffi": {
+      "optional": true
     }
   }
 }
